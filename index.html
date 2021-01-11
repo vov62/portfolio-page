@@ -29,7 +29,7 @@
 
         <div id="personal-details">
             <div class="personal-img">
-                <img src="/images/me.jpeg" width="100px" height="100px" alt="">
+                <img src="images/me.jpeg" width="100px" height="100px" alt="">
             </div>
             <div class="personal-details">
                 <h1 class="personal-profile_name">Avi Vovgen</h1>
@@ -115,7 +115,7 @@
             <h2> My Service </h2>
             <div>
                 <button id="imgPrevBtn">Prev</button>
-                <img src="/images/html5 logo.png" id="imgSlider" alt="" width="200px" height="200px">
+                <img src="images/html5 logo.png" id="imgSlider" alt="" width="200px" height="200px">
                 <button id="imgNextBtn">Next</button>
             </div>
         </div>
@@ -141,13 +141,13 @@
         document.getElementById("imgNextBtn").addEventListener("click", nextImg);
         let imgArray =
             [
-                "/images/css3 logo.png",
-                "/images/js logo.png",
-                "/images/node js logo.png",
-                "/images/react logo.jpg",
-                "/images/angular 6 logo.png",
-                "/images/jquery logo.png",
-                "/images/sql logo.png"
+                "images/css3 logo.png",
+                "images/js logo.png",
+                "images/node js logo.png",
+                "images/react logo.jpg",
+                "images/angular 6 logo.png",
+                "images/jquery logo.png",
+                "images/sql logo.png"
             ]
         let autoImgStart = setInterval(() => nextImg(), 4000);
         document.getElementById("imgSlider").addEventListener("click", () => clearInterval(autoImgStart));
