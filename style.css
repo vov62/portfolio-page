@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+h2{
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-image: url(/background.11.jpg); */
+    background: #487a5f;
+    background-size: cover;
+    background-position: center;  
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 0;
+} 
+
+nav li{
+    list-style: none;  
+    display: inline-block;
+    padding: 5px;
+    margin: 15px;
+}
+nav a{
+    font-size: 35px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;   
+}
+
+nav a:hover{
+    /* color: #283618; */
+    text-decoration: underline chocolate;
+    opacity: .7;
+}
+.personal-img img{
+    width: 250px;
+    height: 250px;
+    margin-left: 100px;
+}
+
+#personal-details{
+    display: flex;
+
+}
+#personal-details .personal-img , .personal-details{
+    width: 40%;
+}
+.personal-profile_name{
+    font-size: 50px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+}
+.personal-profile_work{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.personal-contact-list dt{
+    float: left;
+    font-weight: 700;   
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+}
+#section-a p{
+    color: #555555;
+    font-size: 18px;
+    margin: 0 0 30px;
+    line-height: 1.5;
+}
+
+#clock h2{
+    display: block;
+    font-size: 30px;
+    margin: 20px;
+    text-transform: uppercase;
+}
+#time{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: 30px;
+    border: 2px solid #000;
+    width: 200px;
+    background: coral;
+}
+
+#time div{
+    margin: 2px;
+}
+#time #period{
+    font-size: 16px;
+    margin-top: 20px;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ab4d6db956.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Avi Vovgen-resume</title>
+</head>
+
+<body>
+    <!--כפתור שמשנה את הצבע לפי מצב הרוח של המשתמש-->
+    <!-- להוסיף date שעון-->
+    <!-- להוסיף סליידר עם אנימציות וכפתור-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="personal-details">
+            <div class="personal-img">
+                <img src="/me.jpeg" width="100px" height="100px" alt="">
+            </div>
+            <div class="personal-details">
+                <h1 class="personal-profile_name">Avi Vovgen</h1>
+                <p class="personal-profile_work">Full Stack Web Developer</p>
+
+                <div class="personal-contact-list">
+                    <dt>Age:</dt>
+                    <dd>28</dd>
+                    <dt>Phone:</dt>
+                    <dd><a href="tel:0525213250">(+972)0525213250</a></dd>
+                    <dt>Email:</dt>
+                    <dd><a href="avivovgen1@gmail.com">avivovgen1@gmail.com</a></dd>
+                    <dt>Address:</dt>
+                    <dd>Rehovot,zvi horovitz</dd>
+
+                </div>
+                <div class="personal-profile_social">
+                    <a href target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main section-->
+
+    <div id="container">
+        <div id="section-a" class="card">
+            <h2>About Me</h2>
+            <p> Hi, i'm a junior full stack developer who looking for an opportunity where I can express<br> my skills
+                and
+                learn new technological tools.<br>
+                i'm highly motivated, Fast learner, hard worker, responsible with strong<br>
+                team collaboration and leadership skills. </p>
+
+        </div>
+        <hr>
+
+        <div id="section-b" class="card">
+            <h2> High School</h2>
+            <p> 2010-2007 :השכלה תיכונית - תיכון אמי"ת המ"ר . תעודת בגרות מלאה. תעודת בגרות טכנולוגית במקצוע חשמל .
+                2011-2010 – מכללת אורט . לימודי טכנאי חשמל ,ללא תעודה. קורסים והסמכות
+                רישיון נהיגה B מ-2010.
+                קורס אבטחה בתוקף.
+                רישיון נשק בתוקף.
+            </p>
+        </div>
+
+
+        <div id="section-c" class="card">
+            <h2> hello</h2>
+            <p>
+                שירות צבאי
+                2011-2014 - שירות בגדוד שריון .
+                מרכז אב"כ צריפין, מש"ק אפסנאות. שחרור בדרגת סמ"ר.
+                אחראי על ניהול מלאי מחסן, סיפוק ציוד ללוחמים.
+                ● תפקיד אינטנסיבי ודינאמי.
+                ● עמידה במצבי לחץ .
+                ● סדר וארגון תוך כדי מתן שירות .
+                השכלה
+            </p>
+        </div>
+
+        <div id="section-d" class="card">
+            <h2> hello</h2>
+            <p>
+                נסיון תעסוקתי
+                2017-2015 -עבודה מועדפת בתחנת דלק "יילו".
+                2019-2017 -מאבטח ב"רכבת ישראל".
+                שפות
+                עברית: שפת אם.
+                אנגלית: טובה מאוד
+            </p>
+        </div>
+        <div id="section-c" class="card">
+            <h2> My Service </h2>
+            <div>
+                <button id="imgPrevBtn">Prev</button>
+                <img src="/html5 logo.png" id="imgSlider" alt="" width="200px" height="200px">
+                <button id="imgNextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer part-->
+    <footer>
+        <div id="clock">
+            <h2>The time now is </h2>
+            <div id="time">
+                <div id="hour">00:</div>
+                <div id="minutes">00:</div>
+                <div id="seconds">00</div>
+                <div id="period">AM</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        let index = 0;
+        document.getElementById("imgPrevBtn").addEventListener("click", prevImg);
+        document.getElementById("imgNextBtn").addEventListener("click", nextImg);
+        let imgArray =
+            [
+                "/css3 logo.png",
+                "/js logo.png",
+                "/node js logo.png",
+                "/react logo.jpg",
+                "/angular 6 logo.png",
+                "/jquery logo.png",
+                "/sql logo.png"
+            ]
+        let autoImgStart = setInterval(() => nextImg(), 4000);
+        document.getElementById("imgSlider").addEventListener("click", () => clearInterval(autoImgStart));
+        function nextImg() {
+            index++;                            //  איפוס של האינדקס והעלאה ב1  
+            if (index >= imgArray.length) {
+                index = 0;
+            }
+            document.getElementById("imgSlider").src = imgArray[index];
+        }
+
+        // פונקציה שנייה שתפעיל את פריבאימג
+        function prevImg() {
+            index--;                          // הפחתה ב1 של האינדקס כדי שיהיה אפשר לחזור לתמונה הקודמת
+            if (index < 0) {
+                index = imgArray.length - 1;     // מגדירים שהתמונה תחזיר את התמונה שלפני
+            }
+            document.getElementById("imgSlider").src = imgArray[index];
+        }
+
+
+        // שעה ותאריך
+
+        setInterval(getTime, 500);
+
+        function getTime() {
+            var newTime = new Date();
+            var h = document.getElementById("hour").innerHTML = newTime.getHours();
+            var m = document.getElementById("minutes").innerHTML = ":" + newTime.getMinutes()
+            var s = document.getElementById("seconds").innerHTML = ":" + newTime.getSeconds();
+
+            // if (h > 12) {
+            //     h = h - 12;
+            // }
+            // if (h == 0) {
+            //     h = 12;
+            // }
+            // if (s == 0) {
+            //     s = 1;
+            // }
+            // var period = document.getElementById("period");
+        }
+
+
+
+
+    </script>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".personal-img"), {
+            max: 25,
+            speed: 400
+        });
+
+    </script>
+
+</body>
+
+</html>
